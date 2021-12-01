@@ -1,0 +1,17 @@
+{
+  "development": {
+    "database": "bamazon",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "test": {
+    "database": "bamazon",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "database": "bamazon",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}
