@@ -248,7 +248,7 @@ Tv.findByPk(7)
 
 // Movie.destroy({
 //     where: {
-//         name: 'The Irishman'
+//         name: 'Paul Thomas Anderson'
 //     }
 // }).then(numRowsChanged => {
 //     console.log(numRowsChanged)
@@ -311,6 +311,12 @@ Tv.findByPk(7)
 
 // ]);
 
-// // // implement findOrCreate on a model
-
-
+// // implement findOrCreate on a model
+// Music.findOrCreate({
+//     where: {
+//       by: 'Gloria Estefan'
+//     },
+//     defaults: { by: 'Jennfier Lopez' }
+//   }).then(([Movie, created])=>{
+//     console.log(Movie); 
+//   });
