@@ -63,47 +63,46 @@ const { Movie, Music, Tv } = require('./models');
 //         console.log('ERROR with adding new Tv', err);
 //     });
 
-// // 2 examples of findAll Movie
-// Movie.findAll({
-//     where: {
-//         year: 1995
-//     }
-// });
+// 2 examples of findAll Movie
+Movie.findAll({
+    where: {
+        year: 1995
+    }
+});
 
-// Movie.findAll({
-//     where: {
-//         duration: '3',
-//         rating: '18'
-//     }
-// });
+Movie.findAll({
+    where: {
+        duration: '3',
+        rating: '18'
+    }
+});
 
-// // 2 examples of findAll Music
-// Music.findAll({
-//     where: {
-//         language: 'English'
-//     }
-// });
+// 2 examples of findAll Music
+Music.findAll({
+    where: {
+        language: 'English'
+    }
 
-// Music.findAll({
-//     where: {
-//         duration: '60',
-//         rating: '80'
-//     }
-// });
+Music.findAll({
+    where: {
+        duration: '60',
+        rating: '80'
+    }
+});
 
-// // 2 examples of findAll Tv
-// Tv.findAll({
-//     where: {
-//         duration: 30
-//     }
-// });
+// 2 examples of findAll Tv
+Tv.findAll({
+    where: {
+        duration: 30
+    }
+});
 
-// Tv.findAll({
-//     where: {
-//         duration: '30',
-//         rating: '18'
-//     }
-// });
+Tv.findAll({
+    where: {
+        duration: '30',
+        rating: '18'
+    } 
+});
 
 // 3 examples of findOne Movie
 Movie.findOne({ where: { duration: '3' } })
@@ -128,19 +127,19 @@ Movie.findOne({ where: { rating: '18' } })
 
 Music.findOne({ where: { duration: '60' } })
     .then(function (music) {
-        console.log(player.toJSON());
+        console.log(music.toJSON());
     })
     .catch(function (err) { });
 
 Music.findOne({ where: { by: 'Jay Z' } })
     .then(function (music) {
-        console.log(player.toJSON());
+        console.log(music.toJSON());
     })
     .catch(function (err) { });
 
 Music.findOne({ where: { language: 'English' } })
     .then(function (music) {
-        console.log(player.toJSON());
+        console.log(music.toJSON());
     })
     .catch(function (err) { });
 
@@ -148,19 +147,19 @@ Music.findOne({ where: { language: 'English' } })
 
 Tv.findOne({ where: { starring: 'Martin Lawrence' } })
     .then(function (tv) {
-        console.log(player.toJSON());
+        console.log(tv.toJSON());
     })
     .catch(function (err) { });
 
 Tv.findOne({ where: { genre: 'Comedy' } })
     .then(function (tv) {
-        console.log(player.toJSON());
+        console.log(tv.toJSON());
     })
     .catch(function (err) { });
 
 Tv.findOne({ where: { starring: 'Bee Arthur' } })
     .then(function (tv) {
-        console.log(player.toJSON());
+        console.log(tv.toJSON());
     })
     .catch(function (err) { });
 
@@ -244,31 +243,31 @@ Tv.findByPk(7)
 // //     console.log(numRowsChanged)
 // // })
 
-// // // Remove 1 item from each model
+// Remove 1 item from each model
 
-// // Movie.destroy({
-// //     where: {
-// //         name: 'Casino'
-// //     }
-// // }).then(numRowsChanged => {
-// //     console.log(numRowsChanged)
-// // });
+// Movie.destroy({
+//     where: {
+//         name: 'The Irishman'
+//     }
+// }).then(numRowsChanged => {
+//     console.log(numRowsChanged)
+// });
 
-// // Music.destroy({
-// //     where: {
-// //         name: 'Purple Rain'
-// //     }
-// // }).then(numRowsChanged => {
-// //     console.log(numRowsChanged)
-// // });
+// Music.destroy({
+//     where: {
+//         name: 'Graduation'
+//     }
+// }).then(numRowsChanged => {
+//     console.log(numRowsChanged)
+// });
 
-// // Tv.destroy({
-// //     where: {
-// //         name: 'Martin'
-// //     }
-// // }).then(numRowsChanged => {
-// //     console.log(numRowsChanged)
-// // });
+// Tv.destroy({
+//     where: {
+//         starring: 'Delta Burke'
+//     }
+// }).then(numRowsChanged => {
+//     console.log(numRowsChanged)
+// });
 
 // // // implement bulkCreate on a model
 

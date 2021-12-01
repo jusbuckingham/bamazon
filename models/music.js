@@ -14,13 +14,19 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   Music.init({
-    name: DataTypes.STRING,
+    name: {
+      type: DataTypes.STRING,
+      validate: { notNull: true }
+    },
     by: DataTypes.STRING,
     price: DataTypes.INTEGER,
     description: DataTypes.STRING,
     language: DataTypes.STRING,
     content_type: DataTypes.STRING,
-    year: DataTypes.INTEGER,
+    year: {
+      type: DataTypes.INTEGER,
+      validate: { isInt: { msg: 'Number for player must be an integer' } }
+   },
     duration: DataTypes.INTEGER,
     rating: DataTypes.INTEGER,
     genre: DataTypes.STRING

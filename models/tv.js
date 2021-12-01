@@ -14,13 +14,19 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   Tv.init({
-    name: DataTypes.STRING,
+    name: {
+      type: DataTypes.STRING,
+      validate: { notNull: true }
+    },
     starring: DataTypes.STRING,
     price: DataTypes.INTEGER,
     description: DataTypes.STRING,
     language: DataTypes.STRING,
     content_type: DataTypes.STRING,
-    year: DataTypes.INTEGER,
+    year: {
+      type: DataTypes.INTEGER,
+      validate: { isInt: { msg: 'Number for year must be an integer' } }
+   },
     duration: DataTypes.INTEGER,
     rating: DataTypes.INTEGER,
     genre: DataTypes.STRING
