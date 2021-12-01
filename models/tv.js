@@ -14,10 +14,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   Tv.init({
-    name: {
-      type: DataTypes.STRING,
-      validate: { notNull: true }
-    },
+    name: DataTypes.STRING,
     starring: DataTypes.STRING,
     price: DataTypes.INTEGER,
     description: DataTypes.STRING,

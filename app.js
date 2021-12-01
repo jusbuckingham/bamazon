@@ -82,6 +82,7 @@ Music.findAll({
     where: {
         language: 'English'
     }
+    });
 
 Music.findAll({
     where: {
